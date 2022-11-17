@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  network: MyString
+  geoname_id: 1
+  registered_country_geoname_id: 1
+  represented_country_geoname_id: 1
+  is_anonymous_proxy: 1
+  is_satellite_provider: 1
+  postal_code: MyString
+  latitude: 9.99
+  longitude: 9.99
+  accuracy_radius: 1
+
+two:
+  network: MyString
+  geoname_id: 1
+  registered_country_geoname_id: 1
+  represented_country_geoname_id: 1
+  is_anonymous_proxy: 1
+  is_satellite_provider: 1
+  postal_code: MyString
+  latitude: 9.99
+  longitude: 9.99
+  accuracy_radius: 1

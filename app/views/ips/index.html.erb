@@ -1,0 +1,52 @@
+<div class="container">
+  <h2>Import IPs CSV</h2>
+
+  <%= form_tag import_ips_path, multipart: true do %>
+    <%= file_field_tag :file%>
+    <%= submit_tag "Import IPs", class: "btn btn-primary" %>
+    <hr>
+    <%= link_to "Create IP", new_ip_path, class: "btn btn-success" %>
+    <hr>
+  <% end %>
+
+  <hr>
+  <h2>Find IP by geoname_id!</h2>
+      <form action="<%= ips_path %>" method="GET" class="d-flex">
+        <input name="id" class="form-control me-2" type="number" placeholder="Enter geoname_id" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Find</button>
+      </form>
+  <hr>
+
+  <h1>IPs</h1>
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Geoname_ID</th>
+      <th scope="col">IP Range</th>
+      <th scope="col">Latitude</th>
+      <th scope="col">Longitude</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @ips.each do |ip| %>
+    <tr>
+      <th scope="row"><%= ip.id %></th>
+      <td><%= ip.geoname_id %></td>
+      <td><%= ip.network %></td>
+      <td><%= ip.latitude %></td>
+      <td><%= ip.longitude %></td>
+      <td> <%= link_to "Show", ip, class: "btn btn-secondary" %></td>
+    </tr>
+    <% end %>
+    <tr>
+  </tbody>
+</table>
+
+
+  <%== pagy_bootstrap_nav(@pagy) %>
+
+ 
+</div>

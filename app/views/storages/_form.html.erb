@@ -1,0 +1,33 @@
+<%= form_with(model: storage) do |form| %>
+  <% if storage.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(storage.errors.count, "error") %> prohibited this storage from being saved:</h2>
+
+      <ul>
+        <% storage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :location_id, style: "display: block" %>
+    <%= form.text_field :location_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :ip_id, style: "display: block" %>
+    <%= form.text_field :ip_id, class: "form-control" %>
+  </div>
+
+  <div>
+  <br>
+    <%= form.submit class: "btn btn-success"%>
+  </div>
+<% end %>

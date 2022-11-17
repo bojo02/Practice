@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nearest Storage</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align:center;">Distance between 2 locations</h1>  
+      <h4 style="text-align:center;">Your current location: <%=  @user_location.city_name %></h4>
+      <hr>
+      <% if(number_with_precision(@distance, precision: 1) > "0.0" && @storage.location.city_name != @user_location.city_name)%>
+        <h4 style="text-align:center;">Nearest Storage is: <%= @storage.location.city_name %> | Distance:  <%= number_with_precision(@distance, precision: 1) %> KM</h4>
+      <% else %>
+        <h4 style="text-align:center;">Nearest Storage is: <%= @storage.location.city_name %> | Distance:  Same City!</h4>
+      <% end %>
+
+      <hr>
+
+        <table class="table">
+        <thead class="table table-dark">
+          <tr>
+            <th scope="col">Current Location</th>
+            <th scope="col">Storage Location</th>
+            <th scope="col">Distance in KM</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @storages.each do |storage|%>
+          <tr>
+            <td><%= @user_location.city_name %></td>
+            <td><%= storage.location.city_name %></td>
+            <td><%= number_with_precision(calculateDistance(@user_ip_range[0].latitude, @user_ip_range[0].longitude, storage.ip.latitude, storage.ip.longitude, "K"), precision: 1) %> KM </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <hr>
+      <%= link_to "Search again", root_path, class: "btn btn-primary" %>
+
+    </div>
+  </body>
+</html!

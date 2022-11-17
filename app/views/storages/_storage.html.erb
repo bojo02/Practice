@@ -1,0 +1,21 @@
+<div id="<%= dom_id storage %>">
+  <div class="card" >
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong>Name:</strong>
+        <%= storage.name %>
+      </li>
+      <li class="list-group-item">
+        <strong>Location:</strong>
+        <%= storage.location_id %>
+      </li>
+      <li class="list-group-item">
+        <strong>Ip:</strong>
+        <%= storage.ip_id %>
+      </li>
+      <li class="list-group-item">
+      <%= button_to "Destroy this storage", @storage, method: :delete, class: "btn btn-danger" %>
+      </li>
+    </ul>
+  </div>
+</div>

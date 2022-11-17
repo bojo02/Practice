@@ -1,0 +1,11 @@
+<div class="container">
+<h2>Editing IP #<%= @ip.id %></h2>
+
+  <%= render "form", ip: @ip %>
+
+  <br>
+
+  <div>
+    <%= link_to "Back", @ip, class: "btn btn-secondary" %>
+  </div>
+</div>

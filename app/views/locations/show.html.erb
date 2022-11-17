@@ -1,0 +1,12 @@
+<div style="text-align:center;" class="container">
+  <h2>Location ID: <%= @location.id %></h2>
+  <br>
+  <div style="text-align:center;">
+    <%= render @location %>
+  </div>
+  <br>
+  <div>
+    <%= link_to "Edit", edit_location_path(@location), class: "btn btn-dark" %> |
+    <%= link_to "Back to locations", locations_path, class: "btn btn-success" %>
+  </div>
+</div>

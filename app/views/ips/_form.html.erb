@@ -1,0 +1,84 @@
+<%= form_with(model: ip) do |form| %>
+  <% if ip.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ip.errors.count, "error") %> prohibited this ip from being saved:</h2>
+
+      <ul>
+        <% ip.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :network, style: "display: block" %>
+    <%= form.text_field :network, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :geoname_id, style: "display: block" %>
+    <%= form.number_field :geoname_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :registered_country_geoname_id, style: "display: block" %>
+    <%= form.number_field :registered_country_geoname_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :represented_country_geoname_id, style: "display: block" %>
+    <%= form.number_field :represented_country_geoname_id, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :is_anonymous_proxy, style: "display: block" %>
+    <%= form.number_field :is_anonymous_proxy, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :is_satellite_provider, style: "display: block" %>
+    <%= form.number_field :is_satellite_provider, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :postal_code, style: "display: block" %>
+    <%= form.text_field :postal_code, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :latitude, style: "display: block" %>
+    <%= form.text_field :latitude, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :longitude, style: "display: block" %>
+    <%= form.text_field :longitude, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :accuracy_radius, style: "display: block" %>
+    <%= form.number_field :accuracy_radius, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :ip_start, style: "display: block" %>
+    <%= form.text_field :ip_start, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :ip_end, style: "display: block" %>
+    <%= form.text_field :ip_end, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :ip_start_number, style: "display: block" %>
+    <%= form.number_field :ip_start_number, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label :ip_end_number, style: "display: block" %>
+    <%= form.number_field :ip_end_number, class: "form-control" %>
+  </div>
+
+  <div>
+  <br>
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>

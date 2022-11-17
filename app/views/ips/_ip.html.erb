@@ -1,0 +1,66 @@
+<div id="<%= dom_id ip %>">
+
+
+<div class="card">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <strong>Network:</strong>
+      <%= ip.network %>
+    </li>
+     <li class="list-group-item">
+      <strong>Geoname:</strong>
+      <%= ip.geoname_id %>
+    </li>
+     <li class="list-group-item">
+      <strong>Registered country geoname:</strong>
+      <%= ip.registered_country_geoname_id %>
+    </li>
+    <li class="list-group-item">
+      <strong>Represented country geoname:</strong>
+      <%= ip.represented_country_geoname_id %>
+    </li>
+    <li class="list-group-item">
+      <strong>Is anonymous proxy:</strong>
+      <%= ip.is_anonymous_proxy %>
+    </li>
+    <li class="list-group-item">
+      <strong>Is satellite provider:</strong>
+      <%= ip.is_satellite_provider %>
+    </li>
+    <li class="list-group-item">
+      <strong>Latitude:</strong>
+      <%= ip.latitude %>
+    </li>
+     <li class="list-group-item">
+      <strong>Longitude:</strong>
+      <%= ip.longitude %>
+    </li>
+     <li class="list-group-item">
+     <strong>Accuracy radius:</strong>
+      <%= ip.accuracy_radius %>
+    </li>
+    </li>
+    <li class="list-group-item">
+     <strong>Ip start IPv4:</strong>
+     <%= ip.ip_start %>
+    </li>
+    <li class="list-group-item">
+      <strong>Ip end IPv4:</strong>
+      <%= ip.ip_end %>
+    </li>
+    <li class="list-group-item">
+     <strong>Ip start IPv4 integer:</strong>
+     <%= ip.ip_start_number %>
+    </li>
+    <li class="list-group-item">
+      <strong>Ip end IPv4 integer:</strong>
+      <%= ip.ip_end_number %>
+    </li>
+     <li class="list-group-item">
+     <%= button_to "Delete", @ip, form: { data: { turbo_confirm: "Are you sure?" } }, :method => :delete, class: "btn btn-danger" %>
+    </li>
+    
+  </ul>
+</div>
+
+</div>

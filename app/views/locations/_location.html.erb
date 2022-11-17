@@ -1,0 +1,67 @@
+<div id="<%= dom_id location %>">
+
+<div class="card">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> 
+      <strong>Geoname:</strong>
+      <%= location.geoname_id %>
+    </li>
+    <li class="list-group-item">
+      <strong>Locale code:</strong>
+      <%= location.locale_code %>
+    </li>
+    <li class="list-group-item">
+      <strong>Continent code:</strong>
+      <%= location.continent_code %>
+    </li>
+     <li class="list-group-item">
+       <strong>Country iso code:</strong>
+      <%= location.country_iso_code %>
+    </li>
+    <li class="list-group-item">
+      <strong>Country iso code:</strong>
+      <%= location.country_iso_code %>
+    </li>
+    <li class="list-group-item">
+      <strong>Country name:</strong>
+      <%= location.country_name %>
+    </li>
+    <li class="list-group-item">
+      <strong>Subdivision 1 iso code:</strong>
+      <%= location.subdivision_1_iso_code %>
+    </li>
+    <li class="list-group-item">
+      <strong>Subdivision 1 name:</strong>
+      <%= location.subdivision_1_name %>
+    </li>
+    <li class="list-group-item">
+      <strong>Subdivision 2 iso code:</strong>
+      <%= location.subdivision_2_iso_code %>
+    </li>
+    <li class="list-group-item">
+      <strong>Subdivision 2 name:</strong>
+      <%= location.subdivision_2_name %>
+    </li>
+     <li class="list-group-item">
+      <strong>City name:</strong>
+      <%= location.city_name %>
+    </li>
+     <li class="list-group-item">
+      <strong>Metro code:</strong>
+      <%= location.metro_code %>
+    </li>
+     <li class="list-group-item">
+      <strong>Time zone:</strong>
+      <%= location.time_zone %>
+    </li>
+     <li class="list-group-item">
+      <strong>Is in european union:</strong>
+      <%= location.is_in_european_union %>
+    </li>
+     <li class="list-group-item">
+      <%= button_to "delete", location, form: { data: { turbo_confirm: "Are you sure?" } }, :method => :delete, class: "btn btn-danger" %>
+    </li>
+  </ul>
+</div>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Storages</h1>
+
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Geoname_ID</th>
+        <th scope="col">City</th>
+        <th scope="col">IP Range</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @storages.each do |storage| %>
+      <tr>
+        <th scope="row"><%= storage.id %></th>
+        <td><%= storage.name %></td>
+        <td><%= storage.location.geoname_id %></td>
+        <td><%= storage.location.city_name %></td>
+        <td><%= storage.ip.network %></td>
+        <td> <%= link_to "Show", storage, class: "btn btn-secondary" %></td>
+      </tr>
+      <% end %>
+      <tr>
+    </tbody>
+  </table>
+
+  <%= link_to "Create storage", new_storage_path, class: "btn btn-primary" %>
+</div>
