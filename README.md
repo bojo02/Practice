@@ -1,24 +1,11 @@
-# README
+# Working with the project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails example using Geolocation wiwth MaxMind database to find the nearest storage up to you.
 
-Things you may want to cover:
+* Upload CSV file for IPs and Locations
 
-* Ruby version
+* Create a storage and paste the ID of the Ip range and the Location ID.
 
-* System dependencies
+* Go to Home page and input an ip
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Output: It will return you the nearest Storage by the location of the input IP.
